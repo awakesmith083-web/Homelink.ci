@@ -1,27 +1,33 @@
 # HomeLink.ci
 
-Version statique de HomeLink.ci, reconstruite à partir du patch fourni. Elle est compatible avec GitHub Pages et ne nécessite ni serveur ni base de données.
+Version statique française de HomeLink.ci, optimisée pour GitHub Pages et sans dépendance serveur.
 
-## Fonctionnalités
+## Fonctionnalités disponibles
 
-- Interface française inspirée de l'identité HomeLink.ci : vert pin, crème et laiton.
-- Catalogue de biens ivoiriens avec recherche, type et budget.
-- Favoris persistants dans `localStorage`.
-- Estimateur immobilier par ville, type et surface.
-- Mise en page responsive pour mobile et ordinateur.
+- Accueil éditorial responsive avec identité vert pin, crème et laiton.
+- Catalogue de biens ivoiriens avec recherche texte, type, ville et budget.
+- Vue cartes et vue carte stylisée, sélection par quartier et compteur de résultats.
+- Fiches détaillées avec description, caractéristiques, conseiller, demande de visite et lien WhatsApp.
+- Favoris persistants dans `localStorage` et écran « Mes favoris ».
+- Assistant d'estimation en quatre étapes, calcul indicatif par ville, type et surface.
+- Formules Découverte, Confiance et Signature avec parcours de sélection simulé.
+- Connexion de démonstration locale, newsletter locale et notifications toast.
+- Manifeste PWA et service worker léger pour la mise en cache des fichiers principaux.
 
-## Lancer localement
+## Publication
 
-Ouvrez `index.html` dans un navigateur ou utilisez un serveur statique :
+Le dépôt est publié avec GitHub Pages depuis la branche `main`, dossier racine `/` :
+
+https://awakesmith083-web.github.io/Homelink.ci/
+
+## Limites de la version GitHub Pages
+
+Cette version ne contient pas de serveur. Les comptes, favoris, newsletter et choix de formule sont donc des démonstrations conservées sur l'appareil. Les paiements réels, l'authentification Google, PostgreSQL, les rendez-vous synchronisés, le back-office et les notifications email nécessitent un backend ou un service externe. Les estimations sont indicatives et ne constituent pas une expertise immobilière.
+
+## Développement local
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Puis visitez `http://localhost:8000`.
-
-## Publication
-
-Le site est un frontend statique. Activez GitHub Pages sur la branche `main`, dossier `/ (root)` dans Settings → Pages.
-
-Cette version ne contient pas les routes serveur, l'authentification Google, la base PostgreSQL ou les paiements du projet Next.js original ; ces fonctions nécessitent un hébergement avec backend comme Vercel.
+Puis ouvrir `http://localhost:8000`.
